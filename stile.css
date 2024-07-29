@@ -1,0 +1,208 @@
+html {
+    background-color: #FFFFFF;
+}
+
+p, h2, h3, h4, h5, li {
+    color: #000000;
+    font-family: "Noto Sans", sans-serif;
+}
+
+a {
+    color: #888888;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body h4, body pre {
+    color: #C9363F;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+}
+
+body h4 {
+    font-size: larger;
+}
+
+body pre {
+    font-size: large;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.introduzione {
+    max-width: 520px;
+    margin: 5%;
+    font-size: 100%;
+}
+
+.immagini {
+    max-width: 100%;
+    margin: 10%;
+    font-size: smaller;
+}
+
+.testo {
+    max-width: 570px;
+    margin: 5%;
+    font-size: 90%;
+}
+
+.introduzione p {
+    font-size: smaller;
+}
+
+h1 {
+    font-size: 100%;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+}
+
+/*IMPORTANTE! uniformare la grandezza delle descrizioni*/
+
+hr {
+    border: 3px solid #C9363F;
+}
+
+hr.divisorefooter {
+    border: 1px solid #FFFFFF;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5
+}
+
+.marchio {
+    display: flex;
+    float: left;
+    padding: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #888888;
+}
+
+header a:hover {
+    color: #C9363F;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 35px;
+    overflow: hidden;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    gap: 10px;
+    margin: auto;
+}
+
+.hero img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+.hero h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 200px;
+    font-size: 100px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.content img {
+    position: absolute;
+    width: 30%;
+    z-index: 100;
+    margin: 0;
+    top: 555px;
+    left: 200px;
+}
+
+.spazio img {
+    width: 38%;
+}
+
+.primavera img {
+    position: absolute;
+    width: 36%;
+    z-index: 100;
+    margin: 0;
+    top: 592px;
+    right: 241px;
+}
+
+.estate img {
+    position: absolute;
+    width: 32%;
+    z-index: 100;
+    margin: 0;
+    top: 972px;
+    left: 220px;
+}
+
+.autunno img {
+    position: absolute;
+    width: 36%;
+    z-index: 100;
+    margin: 0;
+    top: 1354px;
+    right: 316px;
+}
+
+.inverno img {
+    position: absolute;
+    width: 32%;
+    z-index: 100;
+    margin: 0;
+    top: 1736px;
+    left: 220px;
+}
+
+.decorazione img {
+    width: 22%;
+}
+
+footer {
+    background-color: #C9363F;
+}
+
+footer h3, footer p {
+    text-decoration: none;
+    color: #FFFFFF;
+}
