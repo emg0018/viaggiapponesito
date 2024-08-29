@@ -2,16 +2,67 @@ html {
     background-color: #FFFFFF;
 }
 
-p, h2, h3, h4, h5, li {
+h1, h2, h4, h5, h6, p, ul, ol, li {
     color: #000000;
     font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a {
+h3 {
+    color: #C9363F;
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.marchio {
+    display: flex;
+    float: left;
+    padding: 25px;
+    padding-left: 2%;
+}
+
+header a {
+    text-decoration: none;
     color: #888888;
+}
+
+header a:hover {
+    color: #C9363F;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 35px;
+    overflow: hidden;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 3px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+
+.tasti li a {
     font-family: "Noto Sans", sans-serif;
 }
 
+.tasti2 li a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 75%;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+    
 body h4, body pre {
     color: #C9363F;
     font-family: "Noto Sans", sans-serif;
@@ -24,7 +75,7 @@ body h4 {
 
 body pre {
     font-size: large;
-}
+}    
 
 .column {
     float: left;
@@ -38,14 +89,54 @@ body pre {
 }
 
 .introduzione {
-    max-width: 520px;
     margin: 5%;
+}
+
+.introduzione h4 {
+    margin-bottom: 2%;
+}
+
+.introduzione h3 {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-weight: 600;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.introduzione h1 {
+    max-width: 40%;
     font-size: 100%;
+    font-weight: 350;
+    line-height: 160%;
+}
+
+.introduzione pre {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.introduzione img {
+    max-width: 100%;
+}
+
+.introduzione p {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 2%;
 }
 
 .immagini {
-    max-width: 100%;
     margin: 10%;
+}
+
+.immagini img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.immagini p {
+    margin-bottom: 8%;
     font-size: smaller;
 }
 
@@ -65,8 +156,6 @@ h1 {
     font-weight: 400;
 }
 
-/*IMPORTANTE! uniformare la grandezza delle descrizioni*/
-
 hr {
     border: 3px solid #C9363F;
 }
@@ -78,37 +167,6 @@ hr.divisorefooter {
 p {
     font-size: 1em;
     line-height: 1.5
-}
-
-.marchio {
-    display: flex;
-    float: left;
-    padding: 15px;
-}
-
-header a {
-    text-decoration: none;
-    color: #888888;
-}
-
-header a:hover {
-    color: #C9363F;
-}
-
-header {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 35px;
-    overflow: hidden;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 100px;
 }
 
 .row {
@@ -155,54 +213,1875 @@ header nav ul {
 }
 
 .spazio img {
-    width: 38%;
+    width: 755px;
+}
+
+.sfondo img {
+    max-width: 100%;
+    width: 55%;
+    position: absolute;
+    margin: 0;
+    top: 975px;
+    left: 500px;
+}
+
+.primavera h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 90;
+    margin: 0;
+    top: 620px;
+    right: 520px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #E2E2E2;
+}
+
+.primavera p {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    max-width: 12%;
+    max-height: 20%;
+    text-align: left;
+    top: 690px;
+    right: 555px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #E2E2E2;
 }
 
 .primavera img {
     position: absolute;
     width: 36%;
-    z-index: 100;
     margin: 0;
     top: 592px;
     right: 241px;
 }
 
+.estate h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 1000px;
+    left: 270px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #1D1D1D;
+}
+
+.estate p {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    max-width: 7%;
+    max-height: 20%;
+    text-align: left;
+    top: 1072px;
+    left: 260px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #C9363F;
+}
+
 .estate img {
     position: absolute;
     width: 32%;
-    z-index: 100;
     margin: 0;
     top: 972px;
     left: 220px;
 }
 
+.autunno h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 1380px;
+    right: 540px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #C9363F;
+}
+
+.autunno p {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    max-width: 11%;
+    max-height: 20%;
+    text-align: left;
+    top: 1438px;
+    right: 575px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #1D1D1D;
+}
+
 .autunno img {
     position: absolute;
     width: 36%;
-    z-index: 100;
     margin: 0;
     top: 1354px;
     right: 316px;
 }
 
+.inverno h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 1780px;
+    left: 260px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #E2E2E2;
+}
+
+.inverno p {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    max-width: 11%;
+    max-height: 20%;
+    text-align: left;
+    top: 1855px;
+    left: 260px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #E2E2E2;
+}
+
 .inverno img {
     position: absolute;
     width: 32%;
-    z-index: 100;
     margin: 0;
     top: 1736px;
     left: 220px;
 }
 
-.decorazione img {
+.decorazioneindex img {
     width: 22%;
+    position: sticky;
+    margin: 0;
+    padding-left: 53%;
+    margin-bottom: -4px;
+}
+
+.decorazionep img {
+    width: 22%;
+    position: sticky;
+    margin: 0;
+    padding-left: 60%;
+    margin-bottom: -4px;
+}
+
+.spaziop img {
+    width: 5%;
 }
 
 footer {
     background-color: #C9363F;
 }
 
-footer h3, footer p {
+footer h3, footer h2, footer h1, footer p {
     text-decoration: none;
     color: #FFFFFF;
+}
+
+footer p {
+    font-size: large;
+}
+
+.matane h3 {
+    font-size: 50px;
+    font-weight: 800;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+
+.mail {
+    padding-left: 5%;
+    padding-top: 8%;
+    padding-bottom: 1%;
+}
+
+.mail h1 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.indirizzo {
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+.indirizzo h1 {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.indirizzo p {
+    font-size: smaller;
+}
+
+@media (max-width:1370px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 200px;
+        font-size: 90px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 565px;
+        left: 240px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 956px;
+        left: 476px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 620px;
+        right: 430px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 12%;
+        max-height: 20%;
+        text-align: left;
+        top: 690px;
+        right: 485px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 592px;
+        right: 201px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 985px;
+        left: 290px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 7%;
+        max-height: 20%;
+        text-align: left;
+        top: 1052px;
+        left: 280px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 956px;
+        left: 238px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1345px;
+        right: 465px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 11%;
+        max-height: 20%;
+        text-align: left;
+        top: 1403px;
+        right: 500px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 1321px;
+        right: 272px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1720px;
+        left: 270px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 11%;
+        max-height: 20%;
+        text-align: left;
+        top: 1795px;
+        left: 270px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1685px;
+        left: 238px;
+    }
+
+    .spazio img {
+        width: 736px;
+    }
+}
+
+@media (max-width:1270px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 200px;
+        font-size: 80px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 575px;
+        left: 230px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 928px;
+        left: 450px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 620px;
+        right: 390px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 12%;
+        max-height: 20%;
+        text-align: left;
+        top: 690px;
+        right: 450px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 592px;
+        right: 180px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 955px;
+        left: 275px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 7%;
+        max-height: 20%;
+        text-align: left;
+        top: 1017px;
+        left: 275px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 928px;
+        left: 226px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1285px;
+        right: 425px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 11%;
+        max-height: 20%;
+        text-align: left;
+        top: 1343px;
+        right: 470px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 1266px;
+        right: 248px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1630px;
+        left: 260px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 11%;
+        max-height: 20%;
+        text-align: left;
+        top: 1695px;
+        left: 260px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1603px;
+        left: 225px;
+    }
+
+    .spazio img {
+        width: 703px;
+    }
+}
+
+@media (max-width:1170px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 5%;
+        top: 200px;
+        font-size: 75px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 525px;
+        left: 220px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 866px;
+        left: 410px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 580px;
+        right: 365px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 650px;
+        right: 405px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 552px;
+        right: 170px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 885px;
+        left: 255px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 947px;
+        left: 255px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 865px;
+        left: 208px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1205px;
+        right: 380px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 1263px;
+        right: 400px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 1179px;
+        right: 232px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1530px;
+        left: 250px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 1595px;
+        left: 250px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1492px;
+        left: 208px;
+    }
+
+    .spazio img {
+        width: 650px;
+    }
+}
+
+@media (max-width:1070px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 10%;
+        top: 200px;
+        font-size: 65px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 485px;
+        left: 195px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 797px;
+        left: 370px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 530px;
+        right: 295px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 600px;
+        right: 355px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 510px;
+        right: 145px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 815px;
+        left: 245px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 869px;
+        left: 245px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 796px;
+        left: 201px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1105px;
+        right: 320px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 1163px;
+        right: 353px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 1083px;
+        right: 201px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1395px;
+        left: 240px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 1455px;
+        left: 240px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1368px;
+        left: 201px;
+    }
+
+    .spazio img {
+        width: 591px;
+    }
+}
+
+@media (max-width:970px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 10%;
+        top: 200px;
+        font-size: 55px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 465px;
+        left: 185px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 741px;
+        left: 340px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 500px;
+        right: 285px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 555px;
+        right: 325px;
+        font-size: 11px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 480px;
+        right: 135px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 760px;
+        left: 215px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 809px;
+        left: 215px;
+        font-size: 11px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 740px;
+        left: 178px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1015px;
+        right: 310px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 1065px;
+        right: 333px;
+        font-size: 11px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 1000px;
+        right: 187px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1280px;
+        left: 205px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 1340px;
+        left: 205px;
+        font-size: 11px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1260px;
+        left: 178px;
+    }
+
+    .spazio img {
+        width: 542px;
+    }
+}
+
+@media (max-width:870px) { 
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 10%;
+        top: 200px;
+        font-size: 45px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 415px;
+        left: 165px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 664px;
+        left: 310px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 445px;
+        right: 265px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 495px;
+        right: 294px;
+        font-size: 10px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 430px;
+        right: 125px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 682px;
+        left: 195px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 725px;
+        left: 195px;
+        font-size: 10px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 664px;
+        left: 157px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 915px;
+        right: 290px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 960px;
+        right: 298px;
+        font-size: 10px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 898px;
+        right: 171px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1152px;
+        left: 185px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 1200px;
+        left: 185px;
+        font-size: 10px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1131px;
+        left: 157px;
+    }
+
+    .spazio img {
+        width: 480px;
+    }
+}
+
+@media (max-width:770px) { 
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 190px;
+        font-size: 40px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 385px;
+        left: 145px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 595px;
+        left: 270px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 403px;
+        right: 240px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 444px;
+        right: 252px;
+        font-size: 9px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 390px;
+        right: 105px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 612px;
+        left: 175px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 650px;
+        left: 175px;
+        font-size: 9px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 595px;
+        left: 142px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 815px;
+        right: 255px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 850px;
+        right: 252px;
+        font-size: 9px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 800px;
+        right: 145px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 1025px;
+        left: 165px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 1065px;
+        left: 165px;
+        font-size: 9px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 1004px;
+        left: 142px;
+    }
+
+    .spazio img {
+        width: 421px;
+    }
+}
+
+@media (max-width:670px) { 
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 175px;
+        font-size: 40px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 345px;
+        left: 125px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 528px;
+        left: 230px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 363px;
+        right: 195px;
+        font-size: 19px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 400px;
+        right: 216px;
+        font-size: 8px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 350px;
+        right: 85px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 542px;
+        left: 160px;
+        font-size: 19px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 572px;
+        left: 160px;
+        font-size: 8px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 528px;
+        left: 130px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 718px;
+        right: 209px;
+        font-size: 19px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 750px;
+        right: 215px;
+        font-size: 8px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 706px;
+        right: 120px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 899px;
+        left: 150px;
+        font-size: 19px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 935px;
+        left: 150px;
+        font-size: 8px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 883px;
+        left: 130px;
+    }
+
+    .spazio img {
+        width: 363px;
+    }
+}
+
+@media (max-width:600px) { 
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 175px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 310px;
+        left: 115px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 480px;
+        left: 205px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 330px;
+        right: 165px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 367px;
+        right: 192px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 320px;
+        right: 75px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 492px;
+        left: 142px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 524px;
+        left: 144px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 479px;
+        left: 118px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 650px;
+        right: 180px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 680px;
+        right: 190px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 639px;
+        right: 106px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 815px;
+        left: 140px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 850px;
+        left: 140px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 798px;
+        left: 118px;
+    }
+
+    .spazio img {
+        width: 324px;
+    }
 }
