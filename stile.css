@@ -63,19 +63,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
     
-body h4, body pre {
+body h4 {
     color: #C9363F;
     font-family: "Noto Sans", sans-serif;
     font-weight: bold;
-}
-
-body h4 {
     font-size: larger;
-}
-
-body pre {
-    font-size: large;
-}    
+}  
 
 .column {
     float: left;
@@ -92,8 +85,20 @@ body pre {
     margin: 5%;
 }
 
+.introduzione h5 {
+    color: #C9363F;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 4%;
+    font-size: xx-large;
+    font-weight: 700;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/*cambiare parametri h5 */
+
 .introduzione h4 {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .introduzione h3 {
@@ -104,26 +109,26 @@ body pre {
     max-height: 100%;
 }
 
-.introduzione h1 {
-    max-width: 40%;
+.introduzione p {
+    max-width: 520px;
     font-size: 100%;
     font-weight: 350;
     line-height: 160%;
+    margin-bottom: 1%;
 }
 
 .introduzione pre {
+    color: #000000;
     max-width: 100%;
     max-height: 100%;
+    margin-bottom: 2%;
+    font-size: smaller;
+    font-weight: 400;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .introduzione img {
     max-width: 100%;
-}
-
-.introduzione p {
-    max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 2%;
 }
 
 .immagini {
@@ -131,6 +136,7 @@ body pre {
 }
 
 .immagini img {
+    width: auto;
     max-width: 100%;
     max-height: 100%;
 }
@@ -143,11 +149,16 @@ body pre {
 .testo {
     max-width: 570px;
     margin: 5%;
-    font-size: 90%;
+    font-size: 95%;
 }
 
-.introduzione p {
-    font-size: smaller;
+.testo li {
+    margin-bottom: 1%;
+    line-height: 1.6;
+}
+
+.testo h3 {
+    margin-bottom: 1.5%;
 }
 
 h1 {
@@ -166,7 +177,8 @@ hr.divisorefooter {
 
 p {
     font-size: 1em;
-    line-height: 1.5
+    line-height: 1.7;
+    margin-bottom: 2%;
 }
 
 .row {
@@ -430,6 +442,7 @@ footer p {
 
 .indirizzo p {
     font-size: smaller;
+    margin-bottom: -0.2%;
 }
 
 @media (max-width:1370px) {
@@ -2083,5 +2096,534 @@ footer p {
 
     .spazio img {
         width: 324px;
+    }
+}
+
+@media (max-width:574px) { 
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 175px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 310px;
+        left: 115px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 473px;
+        left: 195px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 330px;
+        right: 162px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 360px;
+        right: 185px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 320px;
+        right: 75px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 482px;
+        left: 129px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 9%;
+        max-height: 20%;
+        text-align: left;
+        top: 508px;
+        left: 134px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 472px;
+        left: 110px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 634px;
+        right: 175px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 664px;
+        right: 185px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 625px;
+        right: 104px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 788px;
+        left: 125px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 818px;
+        left: 130px;
+        font-size: 7px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 777px;
+        left: 110px;
+    }
+
+    .spazio img {
+        width: 315px;
+    }
+
+    .marchio {
+        display: flex;
+        float: left;
+        padding: 25px;
+        padding-left: 2%;
+        width: 2px;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #888888;
+    }
+    
+    header a:hover {
+        color: #C9363F;
+    }
+    
+    header {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        padding: 25px;
+    }
+    
+    header nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+    
+    .tasti li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
+    }
+    
+    .tasti2 li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-device-width: 451px) {
+    p {
+        max-width: 100%;
+    }
+
+    .testo p {
+        max-width: 100%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 100%;
+        gap: 10px;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 1%;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 125px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 240px;
+        left: 85px;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 370px;
+        left: 155px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 257px;
+        right: 127px;
+        font-size: 14px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 282px;
+        right: 145px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 250px;
+        right: 60px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 378px;
+        left: 100px;
+        font-size: 14px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 8%;
+        max-height: 20%;
+        text-align: left;
+        top: 403px;
+        left: 104px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 370px;
+        left: 85px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 497px;
+        right: 139px;
+        font-size: 14px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 522px;
+        right: 145px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 490px;
+        right: 83px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 618px;
+        left: 99px;
+        font-size: 14px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 643px;
+        left: 105px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 609px;
+        left: 85px;
+    }
+
+    .spazio img {
+        width: 248px;
+    }
+
+    .marchio {
+        display: flex;
+        float: left;
+        padding: 19px;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .marchio img {
+        width: 40vw;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #888888;
+    }
+    
+    header a:hover {
+        color: #C9363F;
+    }
+    
+    header {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        padding: 25px;
+    }
+    
+    header nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+    
+    .tasti li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
+    }
+    
+    .tasti2 li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
+    }
+}
+
+@media only screen and (min-width: 452px) and (max-width: 738px) {
+	.marchio {
+        display: flex;
+        float: left;
+        padding: 19px;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .marchio img {
+        width: 40vw;
+    }
+
+    header a {
+        text-decoration: none;
+        color: #888888;
+    }
+    
+    header a:hover {
+        color: #C9363F;
+    }
+    
+    header {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        padding: 25px;
+    }
+    
+    header nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+    
+    .tasti li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
+    }
+    
+    .tasti2 li a {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55%;
     }
 }
