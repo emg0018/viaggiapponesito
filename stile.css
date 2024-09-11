@@ -16,11 +16,8 @@ h3 {
     padding: 0;
 }
 
-.marchio {
-    display: flex;
-    float: left;
-    padding: 25px;
-    padding-left: 2%;
+.highlight {
+    color: #C9363F;
 }
 
 header a {
@@ -33,29 +30,189 @@ header a:hover {
 }
 
 header {
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    padding: 35px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+  color: #FFFFFF;
 }
 
-header nav ul {
-    margin: 0;
-    padding: 3px;
-    list-style-type: none;
+.home {
+    margin-top: 1%;
     display: flex;
-    flex-direction: row-reverse;
+    list-style: none;
+    gap: 10px;
+}
+
+.logo {
+    z-index: 10;
+}
+
+.logo2 {
+    margin-top: -1.5%;
+    z-index: 10;
+}
+
+nav {
+    margin-bottom: 1%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 6px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     gap: 40px;
 }
 
-.tasti li a {
-    font-family: "Noto Sans", sans-serif;
+nav ul li {
+    position: relative;
 }
 
-.tasti2 li a {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 75%;
+.menu {
+    flex-direction: row-reverse;
+}
+
+.menu2 {
+    flex-direction: row-reverse;
+}
+
+.menu2 li a {
+    font-size: 80%;
+}
+
+.hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #000000;
+}
+
+.hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+  margin-top: 1.5%;
+  height: 32px;
+  width: 32px;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .checkbox {
+    display: block;
+  }
+  
+  nav ul {
+    gap: 5px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #C9363F;
+    width: 100%;
+    height: 18%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  input[type="checkbox"]:checked ~ nav ul {
+    opacity: 100;
+  }
+
+  .hamburger-lines {
+    opacity: 100;
+  }
+
+  ul li {
+    display: block;
+  }
+
+   .submenu {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    margin: 0;
+   }
+
+   .highlight {
+    color: #000000;
+  }
+
+  header a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  header a:hover {
+    color: #000000;
+  }
+
+  .logo img {
+    width: 40vw;
+  }
+
+  .logo2 img {
+    width: 40vw;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu2 {
+    flex-direction: column-reverse;
+  }
 }
 
 body {
@@ -85,17 +242,22 @@ body h4 {
     margin: 5%;
 }
 
-.introduzione h5 {
-    color: #C9363F;
+.box {
+    background-color: #C9363F;
+    max-width: 40%;
+    margin-left: -6%;
+    margin-bottom: 5%;
+  }
+
+.box h5 {
+    color: #FFFFFF;
+    margin-left: 15%;
     max-width: 100%;
     max-height: 100%;
-    margin-bottom: 4%;
     font-size: xx-large;
     font-weight: 700;
     font-family: "Noto Sans", sans-serif;
 }
-
-/*cambiare parametri h5 */
 
 .introduzione h4 {
     margin-bottom: 1%;
@@ -199,7 +361,7 @@ p {
 }
 
 .text {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 0 16px;
 }
@@ -209,7 +371,7 @@ p {
     text-align: center;
     z-index: 100;
     margin: 0;
-    top: 200px;
+    top: 180px;
     font-size: 100px;
     font-weight: 900;
     color: #FFFFFF;
@@ -224,8 +386,47 @@ p {
     left: 200px;
 }
 
+.content h2 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 620px;
+    left: 320px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.content p {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    max-width: 19%;
+    max-height: 20%;
+    top: 690px;
+    left: 295px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #E2E2E2;
+}
+
+.content h3 {
+    position: absolute;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    top: 810px;
+    left: 355px;
+    font-size: 45px;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    color: #000000;
+}
+
 .spazio img {
-    width: 755px;
+    width: 760px;
 }
 
 .sfondo img {
@@ -445,6 +646,21 @@ footer p {
     margin-bottom: -0.2%;
 }
 
+@media (max-width:700px) {
+    .box {
+        max-width: 66%;
+        margin-left: -6%;
+        margin-bottom: 5%;
+      }
+
+      .box h5 {
+        margin-left: 10%;
+        max-width: 100%;
+        max-height: 100%;
+        font-size: 200%;
+    }
+}
+
 @media (max-width:1370px) {
     .hero img {
         display: block;
@@ -473,6 +689,45 @@ footer p {
         margin: 0;
         top: 565px;
         left: 240px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 620px;
+        left: 349px;
+        font-size: 40px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 19%;
+        max-height: 20%;
+        top: 690px;
+        left: 326px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 810px;
+        left: 390px;
+        font-size: 45px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -624,7 +879,7 @@ footer p {
     }
 
     .spazio img {
-        width: 736px;
+        width: 741px;
     }
 }
 
@@ -643,6 +898,7 @@ footer p {
         text-align: center;
         z-index: 100;
         margin: 0;
+        margin-left: 5%;
         top: 200px;
         font-size: 80px;
         font-weight: 900;
@@ -656,6 +912,45 @@ footer p {
         margin: 0;
         top: 575px;
         left: 230px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 625px;
+        left: 335px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 20%;
+        max-height: 20%;
+        top: 690px;
+        left: 303px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 805px;
+        left: 386px;
+        font-size: 40px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -807,7 +1102,7 @@ footer p {
     }
 
     .spazio img {
-        width: 703px;
+        width: 709px;
     }
 }
 
@@ -840,6 +1135,45 @@ footer p {
         margin: 0;
         top: 525px;
         left: 220px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 575px;
+        left: 310px;
+        font-size: 35px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 20%;
+        max-height: 20%;
+        top: 635px;
+        left: 288px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 735px;
+        left: 356px;
+        font-size: 40px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -991,7 +1325,7 @@ footer p {
     }
 
     .spazio img {
-        width: 650px;
+        width: 660px;
     }
 }
 
@@ -1024,6 +1358,45 @@ footer p {
         margin: 0;
         top: 485px;
         left: 195px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 535px;
+        left: 275px;
+        font-size: 33px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 20%;
+        max-height: 20%;
+        top: 588px;
+        left: 258px;
+        font-size: 11px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 675px;
+        left: 326px;
+        font-size: 38px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -1175,7 +1548,7 @@ footer p {
     }
 
     .spazio img {
-        width: 591px;
+        width: 602px;
     }
 }
 
@@ -1208,6 +1581,45 @@ footer p {
         margin: 0;
         top: 465px;
         left: 185px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 508px;
+        left: 256px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 21%;
+        max-height: 20%;
+        top: 554px;
+        left: 238px;
+        font-size: 10px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 635px;
+        left: 300px;
+        font-size: 36px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -1359,7 +1771,7 @@ footer p {
     }
 
     .spazio img {
-        width: 542px;
+        width: 554px;
     }
 }
 
@@ -1392,6 +1804,45 @@ footer p {
         margin: 0;
         top: 415px;
         left: 165px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 450px;
+        left: 228px;
+        font-size: 28px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 21%;
+        max-height: 20%;
+        top: 495px;
+        left: 212px;
+        font-size: 9px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 565px;
+        left: 270px;
+        font-size: 33px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -1543,7 +1994,7 @@ footer p {
     }
 
     .spazio img {
-        width: 480px;
+        width: 492px;
     }
 }
 
@@ -1576,6 +2027,45 @@ footer p {
         margin: 0;
         top: 385px;
         left: 145px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 418px;
+        left: 199px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 21%;
+        max-height: 20%;
+        top: 458px;
+        left: 187px;
+        font-size: 8px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 518px;
+        left: 242px;
+        font-size: 28px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -1727,7 +2217,7 @@ footer p {
     }
 
     .spazio img {
-        width: 421px;
+        width: 432px;
     }
 }
 
@@ -1760,6 +2250,45 @@ footer p {
         margin: 0;
         top: 345px;
         left: 125px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 373px;
+        left: 177px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 24%;
+        max-height: 20%;
+        top: 404px;
+        left: 152px;
+        font-size: 8px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 460px;
+        left: 210px;
+        font-size: 25px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -1911,7 +2440,7 @@ footer p {
     }
 
     .spazio img {
-        width: 363px;
+        width: 372px;
     }
 }
 
@@ -1944,6 +2473,45 @@ footer p {
         margin: 0;
         top: 310px;
         left: 115px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 336px;
+        left: 155px;
+        font-size: 20px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 24%;
+        max-height: 20%;
+        top: 365px;
+        left: 140px;
+        font-size: 7px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 412px;
+        left: 190px;
+        font-size: 23px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -2095,7 +2663,7 @@ footer p {
     }
 
     .spazio img {
-        width: 324px;
+        width: 334px;
     }
 }
 
@@ -2115,8 +2683,8 @@ footer p {
         z-index: 100;
         margin: 0;
         margin-left: 9%;
-        top: 175px;
-        font-size: 20px;
+        top: 165px;
+        font-size: 30px;
         font-weight: 900;
         color: #FFFFFF;
     }
@@ -2128,6 +2696,45 @@ footer p {
         margin: 0;
         top: 310px;
         left: 115px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 336px;
+        left: 157px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 24%;
+        max-height: 20%;
+        top: 362px;
+        left: 138px;
+        font-size: 7px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 407px;
+        left: 188px;
+        font-size: 22px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -2279,75 +2886,234 @@ footer p {
     }
 
     .spazio img {
-        width: 315px;
+        width: 326px;
     }
+}
 
-    .marchio {
-        display: flex;
-        float: left;
-        padding: 25px;
-        padding-left: 2%;
-        width: 2px;
-    }
-
-    header a {
-        text-decoration: none;
-        color: #888888;
+@media (max-width:500px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
     }
     
-    header a:hover {
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 145px;
+        font-size: 30px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 260px;
+        left: 100px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 280px;
+        left: 132px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 24%;
+        max-height: 20%;
+        top: 304px;
+        left: 121px;
+        font-size: 6px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 347px;
+        left: 162px;
+        font-size: 20px;
+        font-weight: bolder;
+        letter-spacing: -5px;
+        color: #000000;
+    }
+
+    .sfondo img {
+        max-width: 55%;
+        position: absolute;
+        margin: 0;
+        top: 405px;
+        left: 175px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 278px;
+        right: 120px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 310px;
+        right: 155px;
+        font-size: 6px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 272px;
+        right: 60px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 412px;
+        left: 117px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 9%;
+        max-height: 20%;
+        text-align: left;
+        top: 437px;
+        left: 122px;
+        font-size: 6px;
+        font-weight: 300;
         color: #C9363F;
     }
     
-    header {
-        display: flex;
-        justify-content: right;
-        align-items: right;
-        padding: 25px;
-    }
-    
-    header nav ul {
+    .estate img {
+        position: absolute;
+        width: 32%;
         margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 10px;
+        top: 405px;
+        left: 100px;
     }
     
-    .tasti li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 543px;
+        right: 135px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #C9363F;
     }
     
-    .tasti2 li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 571px;
+        right: 155px;
+        font-size: 6px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 538px;
+        right: 86px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 680px;
+        left: 115px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 710px;
+        left: 120px;
+        font-size: 6px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 670px;
+        left: 100px;
+    }
+
+    .spazio img {
+        width: 275px;
     }
 }
 
 @media screen and (max-device-width: 451px) {
-    p {
-        max-width: 100%;
-    }
-
-    .testo p {
-        max-width: 100%;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-evenly;
-        max-width: 100%;
-        gap: 10px;
-        margin: auto;
-        flex-direction: column;
-    }
-
-    .column {
-        width: 100%;
-    }
-
     .hero img {
         display: block;
         margin-left: auto;
@@ -2377,6 +3143,45 @@ footer p {
         margin: 0;
         top: 240px;
         left: 85px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 260px;
+        left: 116px;
+        font-size: 15px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 24%;
+        max-height: 20%;
+        top: 282px;
+        left: 102px;
+        font-size: 5px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 318px;
+        left: 143px;
+        font-size: 16px;
+        font-weight: bolder;
+        letter-spacing: -3px;
+        color: #000000;
     }
 
     .sfondo img {
@@ -2528,102 +3333,608 @@ footer p {
     }
 
     .spazio img {
-        width: 248px;
-    }
-
-    .marchio {
-        display: flex;
-        float: left;
-        padding: 19px;
-        padding-left: 5%;
-        padding-top: 5%;
-    }
-
-    .marchio img {
-        width: 40vw;
-    }
-
-    header a {
-        text-decoration: none;
-        color: #888888;
-    }
-    
-    header a:hover {
-        color: #C9363F;
-    }
-    
-    header {
-        display: flex;
-        justify-content: right;
-        align-items: right;
-        padding: 25px;
-    }
-    
-    header nav ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 10px;
-    }
-    
-    .tasti li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
-    }
-    
-    .tasti2 li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
+        width: 245px;
     }
 }
 
-@media only screen and (min-width: 452px) and (max-width: 738px) {
-	.marchio {
-        display: flex;
-        float: left;
-        padding: 19px;
-        padding-left: 5%;
-        padding-top: 5%;
-    }
-
-    .marchio img {
-        width: 40vw;
-    }
-
-    header a {
-        text-decoration: none;
-        color: #888888;
+@media only screen and (min-width: 350px) and (max-width: 700px) {
+    footer p {
+        font-size: smaller;
     }
     
-    header a:hover {
+    .matane h3 {
+        font-size: 35px;
+        font-weight: 800;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+    }
+    
+    .mail {
+        padding-left: 5%;
+        padding-top: 8%;
+        padding-bottom: 1%;
+    }
+    
+    .mail h1 {
+        font-size: small;
+        font-weight: 600;
+    }
+    
+    .indirizzo {
+        padding-left: 5%;
+        padding-top: 1%;
+        padding-bottom: 5%;
+    }
+    
+    .indirizzo h1 {
+        font-size: small;
+        font-weight: 600;
+    }
+    
+    .indirizzo p {
+        font-size: x-small;
+        margin-bottom: -0.2%;
+    }
+}
+
+/*iphone xr*/
+
+@media (max-width:414px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 110px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 210px;
+        left: 70px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 226px;
+        left: 103px;
+        font-size: 12px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 21%;
+        max-height: 20%;
+        top: 249px;
+        left: 91px;
+        font-size: 4px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 282px;
+        left: 116px;
+        font-size: 15px;
+        font-weight: bolder;
+        letter-spacing: -2px;
+        color: #000000;
+    }
+
+    .sfondo img {
+        max-width: 50%;
+        position: absolute;
+        margin: 0;
+        top: 322px;
+        left: 160px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 218px;
+        right: 118px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 238px;
+        right: 140px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 212px;
+        right: 60px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 329px;
+        left: 85px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 10%;
+        max-height: 20%;
+        text-align: left;
+        top: 346px;
+        left: 87px;
+        font-size: 5px;
+        font-weight: 300;
         color: #C9363F;
     }
     
-    header {
-        display: flex;
-        justify-content: right;
-        align-items: right;
-        padding: 25px;
-    }
-    
-    header nav ul {
+    .estate img {
+        position: absolute;
+        width: 32%;
         margin: 0;
-        padding: 0;
-        list-style-type: none;
+        top: 321px;
+        left: 73px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 435px;
+        right: 128px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 454px;
+        right: 137px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 431px;
+        right: 81px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 548px;
+        left: 85px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 569px;
+        left: 88px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 541px;
+        left: 73px;
+    }
+
+    .spazio img {
+        width: 212px;
+    }
+
+    footer p {
+        font-size: smaller;
+    }
+    
+    .matane h3 {
+        font-size: 30px;
+        font-weight: 800;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+    }
+    
+    .mail {
+        padding-left: 5%;
+        padding-top: 8%;
+        padding-bottom: 1%;
+    }
+    
+    .mail h1 {
+        font-size: x-small;
+        font-weight: 600;
+    }
+
+    .mail h2 {
+        font-size: medium;
+        font-weight: 600;
+    }
+    
+    .indirizzo {
+        padding-left: 5%;
+        padding-top: 1%;
+        padding-bottom: 5%;
+    }
+    
+    .indirizzo h1 {
+        font-size: x-small;
+        font-weight: 600;
+    }
+    
+    .indirizzo p {
+        font-size: x-small;
+        margin-bottom: -0.2%;
+    }
+}
+
+/*iphone se*/
+
+@media (max-width:375px) {
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .hero h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        margin-left: 9%;
+        top: 105px;
+        font-size: 25px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content img {
+        position: absolute;
+        width: 30%;
+        z-index: 100;
+        margin: 0;
+        top: 205px;
+        left: 70px;
+    }
+
+    .content h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 222px;
+        left: 97px;
+        font-size: 12px;
+        font-weight: 900;
+        color: #FFFFFF;
+    }
+    
+    .content p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 21%;
+        max-height: 20%;
+        top: 241px;
+        left: 91px;
+        font-size: 4px;
+        font-weight: 500;
+        color: #E2E2E2;
+    }
+    
+    .content h3 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 270px;
+        left: 112px;
+        font-size: 15px;
+        font-weight: bolder;
+        letter-spacing: -2px;
+        color: #000000;
+    }
+
+    .sfondo img {
+        max-width: 50%;
+        position: absolute;
+        margin: 0;
+        top: 310px;
+        left: 150px;
+    }
+    
+    .primavera h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 90;
+        margin: 0;
+        top: 218px;
+        right: 98px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .primavera p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 238px;
+        right: 120px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+    
+    .primavera img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 212px;
+        right: 50px;
+    }
+    
+    .estate h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 315px;
+        left: 85px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #1D1D1D;
+    }
+    
+    .estate p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 10%;
+        max-height: 20%;
+        text-align: left;
+        top: 332px;
+        left: 87px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #C9363F;
+    }
+    
+    .estate img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 311px;
+        left: 70px;
+    }
+    
+    .autunno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 416px;
+        right: 108px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #C9363F;
+    }
+    
+    .autunno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 14%;
+        max-height: 20%;
+        text-align: left;
+        top: 435px;
+        right: 122px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #1D1D1D;
+    }
+    
+    .autunno img {
+        position: absolute;
+        width: 36%;
+        margin: 0;
+        top: 411px;
+        right: 70px;
+    }
+    
+    .inverno h2 {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        top: 516px;
+        left: 80px;
+        font-size: 13px;
+        font-weight: 900;
+        color: #E2E2E2;
+    }
+    
+    .inverno p {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        margin: 0;
+        max-width: 13%;
+        max-height: 20%;
+        text-align: left;
+        top: 537px;
+        left: 85px;
+        font-size: 5px;
+        font-weight: 300;
+        color: #E2E2E2;
+    }
+
+    .inverno img {
+        position: absolute;
+        width: 32%;
+        margin: 0;
+        top: 511px;
+        left: 70px;
+    }
+
+    .spazio img {
+        width: 201px;
+    }
+
+    footer p {
+        font-size: smaller;
+    }
+    
+    .matane h3 {
+        font-size: 30px;
+        font-weight: 800;
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+    }
+    
+    .mail {
+        padding-left: 5%;
+        padding-top: 8%;
+        padding-bottom: 1%;
+    }
+    
+    .mail h1 {
+        font-size: x-small;
+        font-weight: 600;
+    }
+
+    .mail h2 {
+        font-size: medium;
+        font-weight: 600;
+    }
+    
+    .indirizzo {
+        padding-left: 5%;
+        padding-top: 1%;
+        padding-bottom: 5%;
+    }
+    
+    .indirizzo h1 {
+        font-size: x-small;
+        font-weight: 600;
+    }
+    
+    .indirizzo p {
+        font-size: x-small;
+        margin-bottom: -0.2%;
+    }
+}
+
+@media (max-width:700px) { 
+    p {
+        max-width: 100%;
+    }
+
+    .testo p {
+        max-width: 100%;
+    }
+
+    .row {
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        max-width: 100%;
         gap: 10px;
+        margin: auto;
+        flex-direction: column;
     }
-    
-    .tasti li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
-    }
-    
-    .tasti2 li a {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 55%;
+
+    .column {
+        width: 100%;
     }
 }
